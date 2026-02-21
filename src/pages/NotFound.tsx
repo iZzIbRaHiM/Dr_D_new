@@ -12,7 +12,7 @@ const NotFound = () => {
     <div className="flex min-h-screen items-center justify-center bg-muted">
       <div className="text-center">
         <Link to="/" className="inline-block mb-6">
-          <img src="/Dr_D_logo.png" alt="Dr D Academy" className="h-12 w-auto mx-auto" />
+          <img src="/Dr_D_logo.png" alt="Dr D Academy" className="max-w-[260px] w-full h-auto mx-auto" />
         </Link>
         <h1 className="mb-4 text-4xl font-bold">404</h1>
         <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
