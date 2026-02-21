@@ -1,20 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "@/content/site-data";
 
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+const SCROLL_THRESHOLD = 60;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [scrolledPast, setScrolledPast] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const check = () => {
+      setIsMobile(window.innerWidth < 768);
+      setScrolledPast(window.scrollY > SCROLL_THRESHOLD);
+    };
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    return () => {
+      window.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
+    };
+  }, []);
+
+  const headerHidden = isMobile && !scrolledPast;
 
   return (
     <motion.header
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+      animate={{ y: headerHidden ? -100 : 0 }}
+      transition={{ duration: 0.3 }}
       className="fixed top-0 left-0 right-0 z-50 glass-dark"
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
