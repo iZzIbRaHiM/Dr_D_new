@@ -7,8 +7,9 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <Link to="/" className="inline-block">
-              <img src="/Dr_D_logo.png" alt="Dr D Academy" className="max-w-[280px] w-full h-auto" />
+            <Link to="/" className="inline-flex items-center gap-3">
+              <img src="/New_Logo.png" alt="" className="h-14 w-auto" aria-hidden />
+              <span className="font-serif text-2xl font-bold text-foreground">Dr D Academy</span>
             </Link>
             <p className="text-muted-foreground font-sans text-sm mt-4 leading-relaxed">
               The premier trading institute dedicated to transforming aspiring
@@ -40,7 +41,7 @@ const Footer = () => {
             </h4>
             <div className="space-y-3 text-muted-foreground font-sans text-sm">
               <p>info@drdacademy.com</p>
-              <p>+92 315 2191891</p>
+              <p>+923369872332</p>
               <p>10:00 AM - 07:00 PM</p>
             </div>
           </div>

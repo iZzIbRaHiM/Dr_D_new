@@ -9,7 +9,7 @@ export const advantages = [
   {
     title: "Institutional-Grade Mentorship",
     description:
-      "Learn directly from Dr. D and a team of experienced professionals who have collectively navigated over a decade of market cycles. Our mentors don't just teach theory — they trade live, share real-time analysis, and guide you through every market condition.",
+      "Learn directly from Syed Abbas Shah and a team of experienced professionals who have collectively navigated over a decade of market cycles. Our mentors don't just teach theory — they trade live on Deriv MT5, share real-time analysis, and guide you through every market condition.",
     points: [
       "One-on-one guidance from seasoned traders",
       "Live market analysis sessions every week",
@@ -59,7 +59,7 @@ export const testimonials = [
     name: "Fatima K.",
     role: "Swing Trader",
     quote:
-      "The mentorship quality is unmatched. Dr. D's approach to risk management alone was worth the entire investment. I now trade with discipline and clarity I never thought possible.",
+      "The mentorship quality is unmatched. Syed Abbas Shah's approach to risk management alone was worth the entire investment. I now trade with discipline and clarity I never thought possible.",
   },
   {
     name: "Hassan M.",
@@ -88,7 +88,7 @@ export const whyUsFaqs = [
   {
     question: "Is the mentorship really for a lifetime?",
     answer:
-      "Yes. Once you enroll in Dr D Academy, you receive lifetime access to our premium community, all future course updates, and ongoing mentorship from Dr. D and our team of professionals.",
+      "Yes. Once you enroll in Dr D Academy, you receive lifetime access to our premium community, all future course updates, and ongoing mentorship from Syed Abbas Shah and our team of professionals.",
   },
   {
     question: "What is the fee structure?",

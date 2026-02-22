@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import aboutAcademy from "@/assets/about-academy.jpg";
+// CEO photo (Syed Abbas Shah) and him working on Deriv MT5
+const ceoPhoto = "/Abbass.jpeg";
+const ceoWorking = "/Abbas.jpeg";
 
 const AboutSection = () => {
   return (
@@ -51,25 +53,26 @@ const AboutSection = () => {
           >
             <div className="rounded-2xl overflow-hidden gold-border-glow">
               <img
-                src={aboutAcademy}
-                alt="Dr D Academy trading classroom"
+                src={ceoWorking}
+                alt="Syed Abbas Shah trading on Deriv MT5"
                 className="w-full h-64 object-cover"
               />
             </div>
-            <div className="glass-dark rounded-2xl p-8 golden-aura">
-              <div className="mb-4">
-                <h3 className="font-serif text-2xl font-bold mb-2">Dr. D</h3>
-                <p className="text-primary font-sans text-sm tracking-wide">
-                  Founder & Lead Mentor — Dr D Academy
+            <div className="glass-dark rounded-2xl p-8 golden-aura flex gap-6">
+              <img
+                src={ceoPhoto}
+                alt="Syed Abbas Shah — CEO, Dr D Academy"
+                className="w-24 h-24 rounded-full object-cover border-2 border-primary/30 shrink-0"
+              />
+              <div>
+                <h3 className="font-serif text-2xl font-bold mb-2">Syed Abbas Shah</h3>
+                <p className="text-primary font-sans text-sm tracking-wide mb-3">
+                  CEO, Founder & Lead Instructor — Dr D Academy
+                </p>
+                <p className="text-muted-foreground font-sans leading-relaxed text-sm">
+                  Syed Abbas Shah is the CEO and founder of Dr D Academy — a professional trader and instructor with over a decade of experience. He trades and teaches on the Deriv MT5 platform. Our goal is to protect people from fraudulent schemes and guide them to trade with discipline until they are consistently profitable.
                 </p>
               </div>
-              <p className="text-muted-foreground font-sans leading-relaxed text-sm">
-                Dr D Academy was founded by Dr. D, an expert with over a decade of
-                experience in the field of trading. Our goal is to protect people from
-                fraudulent schemes and improve their lives by educating them to earn
-                independently. We carefully educate, monitor, and guide individuals
-                until they are consistently profitable.
-              </p>
             </div>
           </motion.div>
         </div>

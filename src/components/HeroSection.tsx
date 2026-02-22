@@ -12,9 +12,9 @@ const HeroSection = () => {
         <img
           src={heroBg}
           alt=""
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-85"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/25 to-background" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center pt-20">
@@ -60,6 +60,12 @@ const HeroSection = () => {
             className="px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-lg pulse-gold hover:brightness-110 transition-all duration-300 text-lg"
           >
             Enroll Now
+          </a>
+          <a
+            href="#deriv"
+            className="px-10 py-4 border border-primary/40 text-primary font-sans font-semibold rounded-lg golden-aura hover:bg-primary/10 transition-all duration-300 text-lg"
+          >
+            Trade on Deriv MT5
           </a>
           <a
             href="#about"

@@ -14,7 +14,7 @@ export const features = [
   {
     title: "Live Q&A Sessions",
     description:
-      "Engage in live Q&A interaction sessions with Dr. D, where students ask questions directly and receive practical guidance for trading success.",
+      "Engage in live Q&A sessions with Syed Abbas Shah, where students ask questions directly and receive practical guidance for trading success on Deriv MT5.",
     icon: "MessageCircle",
   },
 ];

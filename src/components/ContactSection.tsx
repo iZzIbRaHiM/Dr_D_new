@@ -7,7 +7,7 @@ import { submitContactForm, isContactFormConfigured } from "@/lib/submitContactF
 const contactInfo = [
   { icon: MapPin, label: "Our Address", value: "Dr D Academy, Headquarters" },
   { icon: Mail, label: "E-mail", value: "info@drdacademy.com" },
-  { icon: Phone, label: "Contact", value: "+92 315 2191891" },
+  { icon: Phone, label: "Contact", value: "+923369872332" },
   { icon: Clock, label: "Hours of Operation", value: "10:00 AM - 07:00 PM" },
 ];
 

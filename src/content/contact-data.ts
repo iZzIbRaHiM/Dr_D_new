@@ -18,7 +18,7 @@ export const contactInfo = [
   },
   {
     label: "Phone / WhatsApp",
-    value: "+92 315 2191891",
+    value: "+923369872332",
     icon: "Phone",
   },
   {

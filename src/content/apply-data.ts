@@ -24,7 +24,7 @@ export const applicationSteps = [
     step: 3,
     title: "Submit Payment Confirmation",
     description:
-      "Send the screenshot of your successful payment to our team via WhatsApp at +92 315 2191891. Our enrollment team will verify your payment within 24 hours.",
+      "Send the screenshot of your successful payment to our team via WhatsApp at +923369872332. Our enrollment team will verify your payment within 24 hours.",
     detail: "Ensure your screenshot clearly shows the transaction details.",
   },
   {
@@ -62,7 +62,7 @@ export const faqs = [
   {
     question: "Is the mentorship really for a lifetime?",
     answer:
-      "Yes. Once you enroll in Dr D Academy, you receive lifetime access to our premium community, all future course updates, and ongoing mentorship from Dr. D and our team of professionals.",
+      "Yes. Once you enroll in Dr D Academy, you receive lifetime access to our premium community, all future course updates, and ongoing mentorship from Syed Abbas Shah and our team of professionals.",
   },
   {
     question: "What is the fee structure?",
