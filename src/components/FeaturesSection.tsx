@@ -22,7 +22,7 @@ const FeaturesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.6 }}
-                className="glass-dark rounded-xl p-8 golden-aura group cursor-default"
+                className="glass-dark rounded-xl p-6 sm:p-8 golden-aura group cursor-default"
               >
                 <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                   <Icon className="w-7 h-7 text-primary" />

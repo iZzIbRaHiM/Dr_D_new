@@ -56,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
@@ -86,9 +86,9 @@ const Contact = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     {iconMap[info.icon]}
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-sans font-semibold text-foreground text-sm">{info.label}</h4>
-                    <p className="text-muted-foreground font-sans text-sm mt-1">{info.value}</p>
+                    <p className="text-muted-foreground font-sans text-sm mt-1 break-words">{info.value}</p>
                   </div>
                 </motion.div>
               ))}
@@ -96,18 +96,22 @@ const Contact = () => {
 
             {/* Form */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="lg:col-span-3">
-              <div className="glass-dark rounded-2xl p-8 md:p-12 gold-border-glow">
+              <div className="glass-dark rounded-2xl p-6 sm:p-8 md:p-12 gold-border-glow">
                 <h2 className="font-serif text-2xl font-bold text-foreground mb-2">Ready to Get Started?</h2>
                 <p className="text-muted-foreground font-sans text-sm mb-8">Fill out the form below and our team will reach out within 24 hours.</p>
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Input
+                      type="text"
+                      aria-label="First Name"
                       placeholder="First Name"
                       value={form.firstName}
                       onChange={(e) => setForm({ ...form, firstName: e.target.value })}
                       className="bg-secondary/50 border-border focus:border-primary focus:shadow-[0_10px_10px_-5px_rgba(212,175,55,0.2)] transition-all"
                     />
                     <Input
+                      type="text"
+                      aria-label="Last Name"
                       placeholder="Last Name"
                       value={form.lastName}
                       onChange={(e) => setForm({ ...form, lastName: e.target.value })}
@@ -116,18 +120,22 @@ const Contact = () => {
                   </div>
                   <Input
                     type="email"
+                    aria-label="Email Address"
                     placeholder="Email Address"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="bg-secondary/50 border-border focus:border-primary focus:shadow-[0_10px_10px_-5px_rgba(212,175,55,0.2)] transition-all"
                   />
                   <Input
+                    type="tel"
+                    aria-label="Phone or WhatsApp"
                     placeholder="Phone / WhatsApp"
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
                     className="bg-secondary/50 border-border focus:border-primary focus:shadow-[0_10px_10px_-5px_rgba(212,175,55,0.2)] transition-all"
                   />
                   <Textarea
+                    aria-label="Your Message"
                     placeholder="Your Message"
                     rows={4}
                     value={form.message}
@@ -137,7 +145,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground font-sans font-semibold rounded golden-aura pulse-gold transition-all duration-300 disabled:opacity-70"
+                    className="w-full flex items-center justify-center gap-2 min-h-[44px] px-8 py-3.5 bg-primary text-primary-foreground font-sans font-semibold rounded golden-aura pulse-gold transition-all duration-300 disabled:opacity-70"
                   >
                     <Send size={16} /> {submitting ? "Sending…" : "Send Message"}
                   </button>

@@ -7,11 +7,11 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <Link to="/" className="inline-flex items-center gap-3">
-              <img src="/New_Logo.png" alt="" className="h-14 w-auto" aria-hidden />
-              <span className="font-serif text-2xl font-bold text-foreground">Dr D Academy</span>
+            <Link to="/" className="inline-flex items-center gap-2 sm:gap-3 flex-wrap">
+              <img src="/New_Logo.png" alt="Dr D Academy" className="h-12 sm:h-14 w-auto shrink-0" />
+              <span className="font-serif text-xl sm:text-2xl font-bold text-foreground">Dr D Academy</span>
             </Link>
-            <p className="text-muted-foreground font-sans text-sm mt-4 leading-relaxed">
+            <p className="text-muted-foreground font-sans text-sm mt-4 leading-relaxed break-words">
               The premier trading institute dedicated to transforming aspiring
               traders into consistently profitable professionals through
               simplified, proven strategies.
@@ -39,7 +39,7 @@ const Footer = () => {
             <h4 className="font-serif text-lg font-semibold mb-4 text-foreground">
               Contact
             </h4>
-            <div className="space-y-3 text-muted-foreground font-sans text-sm">
+            <div className="space-y-3 text-muted-foreground font-sans text-sm break-words">
               <p>City Housing Society, Jhelum</p>
               <p>info@drdacademy.com</p>
               <p>+923369872332</p>

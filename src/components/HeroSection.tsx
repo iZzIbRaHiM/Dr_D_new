@@ -53,23 +53,23 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <a
             href="#courses"
-            className="px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-lg pulse-gold hover:brightness-110 transition-all duration-300 text-lg"
+            className="w-full sm:w-auto min-h-[44px] flex items-center justify-center px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-lg pulse-gold hover:brightness-110 transition-all duration-300 text-lg"
           >
             Enroll Now
           </a>
           <a
             href="#deriv"
-            className="px-10 py-4 border border-primary/40 text-primary font-sans font-semibold rounded-lg golden-aura hover:bg-primary/10 transition-all duration-300 text-lg"
+            className="w-full sm:w-auto min-h-[44px] flex items-center justify-center px-10 py-4 border border-primary/40 text-primary font-sans font-semibold rounded-lg golden-aura hover:bg-primary/10 transition-all duration-300 text-lg"
           >
             Trade on Deriv MT5
           </a>
           <a
             href="#about"
-            className="px-10 py-4 border border-primary/40 text-primary font-sans font-semibold rounded-lg golden-aura hover:bg-primary/10 transition-all duration-300 text-lg"
+            className="w-full sm:w-auto min-h-[44px] flex items-center justify-center px-10 py-4 border border-primary/40 text-primary font-sans font-semibold rounded-lg golden-aura hover:bg-primary/10 transition-all duration-300 text-lg"
           >
             Learn More
           </a>

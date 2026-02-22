@@ -8,7 +8,7 @@ export const contactHero = {
 export const contactInfo = [
   {
     label: "Address",
-    value: "Near Society Office, Shaheen Town, Lehtrar Rd, Islamabad",
+    value: "City Housing Society, Jhelum",
     icon: "MapPin",
   },
   {
@@ -35,7 +35,7 @@ export const contactFaqs = [
   },
   {
     question: "Can I visit the training center in person?",
-    answer: "Yes, our physical training center in Islamabad is open for visits during business hours. We recommend scheduling an appointment through WhatsApp first.",
+    answer: "Yes, our physical location in City Housing Society, Jhelum is open for visits during business hours. We recommend scheduling an appointment through WhatsApp first.",
   },
   {
     question: "Do you offer online-only programs?",

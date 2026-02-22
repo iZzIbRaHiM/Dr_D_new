@@ -36,7 +36,7 @@ const CourseSection = () => {
           className="max-w-5xl mx-auto glass-dark rounded-2xl overflow-hidden golden-aura"
         >
           <div className="grid lg:grid-cols-2">
-            <div className="p-10 md:p-14">
+            <div className="p-6 md:p-10 lg:p-14">
               <div className="flex items-center gap-3 mb-6">
                 <TrendingUp className="w-8 h-8 text-primary" />
                 <span className="text-primary font-sans font-semibold tracking-wide uppercase text-sm">

@@ -58,15 +58,15 @@ const AboutSection = () => {
                 className="w-full h-64 object-cover"
               />
             </div>
-            <div className="glass-dark rounded-2xl p-8 golden-aura flex gap-6">
+            <div className="glass-dark rounded-2xl p-6 sm:p-8 golden-aura flex flex-col sm:flex-row gap-4 sm:gap-6">
               <img
                 src={ceoPhoto}
                 alt="Syed Abbas Shah — CEO, Dr D Academy"
-                className="w-24 h-24 rounded-full object-cover border-2 border-primary/30 shrink-0"
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-primary/30 shrink-0 mx-auto sm:mx-0"
               />
-              <div>
-                <h3 className="font-serif text-2xl font-bold mb-2">Syed Abbas Shah</h3>
-                <p className="text-primary font-sans text-sm tracking-wide mb-3">
+              <div className="min-w-0 text-center sm:text-left">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold mb-2">Syed Abbas Shah</h3>
+                <p className="text-primary font-sans text-xs sm:text-sm tracking-wide mb-3 break-words">
                   CEO, Founder & Lead Instructor — Dr D Academy
                 </p>
                 <p className="text-muted-foreground font-sans leading-relaxed text-sm">

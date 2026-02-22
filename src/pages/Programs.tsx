@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowRight, Clock, BarChart3, Target, CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -15,7 +16,7 @@ const fadeUp = {
 
 const Programs = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
@@ -59,7 +60,7 @@ const Programs = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={fadeUp}
-              className="glass-dark rounded-2xl p-8 md:p-12 gold-border-glow"
+              className="glass-dark rounded-2xl p-6 sm:p-8 md:p-12 gold-border-glow"
             >
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <span className="px-3 py-1 text-xs font-sans font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full border border-primary/30">
@@ -114,7 +115,7 @@ const Programs = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-4 mt-10 pt-8 border-t border-border">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-4 mt-10 pt-8 border-t border-border">
                 <div className="flex gap-2 flex-wrap">
                   {program.markets.map((m) => (
                     <span key={m} className="px-2.5 py-1 text-xs font-sans bg-muted rounded text-muted-foreground">
@@ -122,13 +123,13 @@ const Programs = () => {
                     </span>
                   ))}
                 </div>
-                <div className="ml-auto">
-                  <a
-                    href="/apply"
-                    className="inline-flex items-center gap-2 px-8 py-3 border border-primary/50 text-primary font-sans text-sm font-medium rounded golden-aura hover:bg-primary/10 transition-all duration-300"
+                <div className="sm:ml-auto w-full sm:w-auto">
+                  <Link
+                    to="/apply"
+                    className="inline-flex items-center justify-center gap-2 min-h-[44px] w-full sm:w-auto px-8 py-3 border border-primary/50 text-primary font-sans text-sm font-medium rounded golden-aura hover:bg-primary/10 transition-all duration-300"
                   >
                     Enroll Now <ArrowRight size={16} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>

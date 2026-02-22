@@ -5,10 +5,10 @@ import { toast } from "sonner";
 import { submitContactForm, isContactFormConfigured } from "@/lib/submitContactForm";
 
 const contactInfo = [
-  { icon: MapPin, label: "Our Address", value: "Dr D Academy, Headquarters" },
+  { icon: MapPin, label: "Our Address", value: "City Housing Society, Jhelum" },
   { icon: Mail, label: "E-mail", value: "info@drdacademy.com" },
   { icon: Phone, label: "Contact", value: "+923369872332" },
-  { icon: Clock, label: "Hours of Operation", value: "10:00 AM - 07:00 PM" },
+  { icon: Clock, label: "Hours of Operation", value: "10:00 AM - 07:00 PM (Mon–Sat)" },
 ];
 
 const ContactSection = () => {
@@ -99,7 +99,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="glass-dark rounded-2xl p-8 space-y-6"
+            className="glass-dark rounded-2xl p-6 sm:p-8 space-y-6"
           >
             <h3 className="font-serif text-2xl font-bold mb-2">
               Ready to Get Started?
@@ -111,6 +111,7 @@ const ContactSection = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               <input
                 type="text"
+                aria-label="First Name"
                 placeholder="First Name"
                 required
                 value={formData.firstName}
@@ -121,6 +122,7 @@ const ContactSection = () => {
               />
               <input
                 type="text"
+                aria-label="Last Name"
                 placeholder="Last Name"
                 required
                 value={formData.lastName}
@@ -133,6 +135,7 @@ const ContactSection = () => {
 
             <input
               type="email"
+              aria-label="Email"
               placeholder="Email"
               required
               value={formData.email}
@@ -144,6 +147,7 @@ const ContactSection = () => {
 
             <input
               type="tel"
+              aria-label="Phone or WhatsApp"
               placeholder="Phone / Mobile"
               value={formData.phone}
               onChange={(e) =>
@@ -153,6 +157,7 @@ const ContactSection = () => {
             />
 
             <textarea
+              aria-label="Your Message"
               placeholder="Your Message"
               rows={3}
               value={formData.message}
@@ -165,7 +170,7 @@ const ContactSection = () => {
             <button
               type="submit"
               disabled={submitting}
-              className="w-full px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-lg pulse-gold hover:brightness-110 transition-all duration-300 disabled:opacity-70"
+              className="w-full min-h-[44px] px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-lg pulse-gold hover:brightness-110 transition-all duration-300 disabled:opacity-70"
             >
               {submitting ? "Sending…" : "Submit Application"}
             </button>

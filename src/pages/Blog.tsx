@@ -36,14 +36,16 @@ const Blog = () => {
 
   if (activePost) {
     return (
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background overflow-x-hidden">
         <Navbar />
         <section className="relative pt-32 pb-10 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--midnight-light))_0%,hsl(var(--background))_70%)]" />
           <div className="container mx-auto px-6 relative z-10 max-w-3xl">
             <button
+              type="button"
               onClick={() => setSelectedPost(null)}
-              className="flex items-center gap-2 text-primary font-sans text-sm mb-8 hover:underline"
+              aria-label="Back to blog list"
+              className="flex items-center gap-2 min-h-[44px] text-primary font-sans text-sm mb-8 hover:underline"
             >
               <ArrowLeft size={16} /> Back to Blog
             </button>
@@ -87,7 +89,7 @@ const Blog = () => {
   }
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
@@ -122,7 +124,7 @@ const Blog = () => {
               <div className="h-64 lg:h-auto overflow-hidden">
                 <img src={blogImages[blogPosts[0].slug]} alt={blogPosts[0].title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <div className="p-8 md:p-12 flex flex-col justify-center">
+              <div className="p-6 sm:p-8 md:p-12 flex flex-col justify-center">
                 <span className="px-3 py-1 text-xs font-sans font-semibold tracking-wider uppercase bg-primary/10 text-primary rounded-full border border-primary/30 self-start">
                   Featured — {blogPosts[0].category}
                 </span>

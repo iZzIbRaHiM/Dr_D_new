@@ -21,7 +21,7 @@ const fadeUp = {
 
 const Apply = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
@@ -48,7 +48,7 @@ const Apply = () => {
           </h2>
           <div className="space-y-0">
             {applicationSteps.map((s, i) => (
-              <motion.div key={s.step} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex gap-8 items-start">
+              <motion.div key={s.step} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex gap-4 sm:gap-8 items-start">
                 <div className="flex flex-col items-center shrink-0">
                   <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center golden-aura">
                     <span className="gold-gradient-text font-serif font-bold text-lg">{s.step}</span>
@@ -69,7 +69,7 @@ const Apply = () => {
       {/* Download Brochure CTA */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="glass-dark rounded-2xl p-10 md:p-16 gold-border-glow text-center max-w-3xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="glass-dark rounded-2xl p-6 sm:p-10 md:p-16 gold-border-glow text-center max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Download Brochure</h2>
             <p className="text-muted-foreground font-sans mb-8">
               Get complete details about our programs, fee structure, and curriculum in our comprehensive brochure.
@@ -78,7 +78,7 @@ const Apply = () => {
               href="https://wa.me/923369872332?text=Hi%2C%20I%20would%20like%20to%20request%20the%20Dr%20D%20Academy%20brochure."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded golden-aura pulse-gold transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded golden-aura pulse-gold transition-all duration-300"
             >
               <Download size={18} /> Request Brochure via WhatsApp
             </a>

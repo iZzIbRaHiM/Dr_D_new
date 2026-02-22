@@ -33,7 +33,7 @@ const DerivSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
-          className="max-w-3xl mx-auto text-center text-muted-foreground font-sans text-lg leading-relaxed mb-10"
+          className="max-w-3xl mx-auto text-center text-muted-foreground font-sans text-base sm:text-lg leading-relaxed mb-10 px-1"
         >
           {derivSection.description}
         </motion.p>
@@ -68,7 +68,7 @@ const DerivSection = () => {
             href={DERIV_REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-lg pulse-gold hover:brightness-110 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 min-h-[44px] px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-lg pulse-gold hover:brightness-110 transition-all duration-300"
           >
             {derivSection.cta}
           </a>

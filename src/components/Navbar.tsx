@@ -37,9 +37,9 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 glass-dark"
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" onClick={scrollToTop} className="flex items-center gap-3">
-          <img src="/New_Logo.png" alt="" className="h-12 w-auto" aria-hidden />
-          <span className="font-serif text-2xl font-bold gold-gradient-text">Dr D Academy</span>
+        <Link to="/" onClick={scrollToTop} className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <img src="/New_Logo.png" alt="Dr D Academy" className="h-10 w-auto sm:h-12 shrink-0" />
+          <span className="font-serif text-lg sm:text-2xl font-bold gold-gradient-text truncate">Dr D Academy</span>
         </Link>
 
         {/* Desktop Nav */}

@@ -55,7 +55,7 @@ const WhyChooseUsSection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 * i }}
-                className="glass-dark rounded-xl p-8 text-center golden-aura"
+                className="glass-dark rounded-xl p-6 sm:p-8 text-center golden-aura"
               >
                 <span className="font-serif text-3xl md:text-4xl font-bold gold-gradient-text">
                   {stat.value}

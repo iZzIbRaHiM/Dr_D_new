@@ -49,7 +49,7 @@ export const milestones = [
   { year: "2020", event: "Launched comprehensive online trading programs on Deriv MT5" },
   { year: "2021", event: "Reached 200+ mentored students across Pakistan" },
   { year: "2022", event: "Introduced Advanced Technical Analysis program" },
-  { year: "2023", event: "Physical Training Center established in Islamabad" },
+  { year: "2023", event: "Physical location established in City Housing Society, Jhelum" },
   { year: "2024", event: "Surpassed 13k+ successfully mentored graduates" },
   { year: "2025", event: "Launched Risk & Capital Management intensive course" },
 ];

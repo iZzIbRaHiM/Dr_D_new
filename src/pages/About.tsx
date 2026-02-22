@@ -15,7 +15,7 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
@@ -37,7 +37,7 @@ const About = () => {
       {/* Mission */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="glass-dark rounded-2xl p-10 md:p-16 gold-border-glow text-center max-w-4xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="glass-dark rounded-2xl p-6 sm:p-10 md:p-16 gold-border-glow text-center max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">{mission.title}</h2>
             <p className="text-muted-foreground font-sans text-lg leading-relaxed">{mission.description}</p>
           </motion.div>
@@ -49,7 +49,7 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-5 gap-12 items-start">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="md:col-span-2">
-              <div className="glass-dark rounded-2xl p-8 gold-border-glow text-center">
+              <div className="glass-dark rounded-2xl p-6 sm:p-8 gold-border-glow text-center">
                 <img src="/Abbass.jpeg" alt="Syed Abbas Shah — CEO, Dr D Academy" className="w-40 h-40 mx-auto rounded-full object-cover border-2 border-primary/30 mb-6" />
                 <h3 className="font-serif text-2xl font-bold text-foreground">{founderSection.name}</h3>
                 <p className="text-primary font-sans text-sm mt-1">{founderSection.title}</p>
@@ -84,7 +84,7 @@ const About = () => {
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground text-center mb-12">Our Core Values</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {values.map((v, i) => (
-              <motion.div key={v.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="glass-dark rounded-xl p-8 gold-border-glow">
+              <motion.div key={v.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="glass-dark rounded-xl p-6 sm:p-8 gold-border-glow">
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{v.title}</h3>
                 <p className="text-muted-foreground font-sans leading-relaxed">{v.description}</p>
               </motion.div>
@@ -99,7 +99,7 @@ const About = () => {
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground text-center mb-12">Our Journey</h2>
           <div className="space-y-0">
             {milestones.map((m, i) => (
-              <motion.div key={m.year} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex gap-6 items-start group">
+              <motion.div key={m.year} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex gap-4 sm:gap-6 items-start group">
                 <div className="flex flex-col items-center">
                   <span className="w-3 h-3 rounded-full bg-primary shrink-0 mt-1.5" />
                   {i < milestones.length - 1 && <div className="w-px h-16 bg-border" />}

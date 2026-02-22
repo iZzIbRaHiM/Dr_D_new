@@ -28,7 +28,7 @@ const fadeUp = {
 
 const WhyUs = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
@@ -58,7 +58,7 @@ const WhyUs = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={fadeUp}
-              className={`grid md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:direction-rtl" : ""}`}
+              className="grid md:grid-cols-2 gap-12 items-center"
             >
               {/* Image placeholder */}
               <div className={`${i % 2 === 1 ? "md:order-2" : ""}`}>
@@ -108,7 +108,7 @@ const WhyUs = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="glass-dark rounded-xl p-8 gold-border-glow relative"
+                className="glass-dark rounded-xl p-6 sm:p-8 gold-border-glow relative"
               >
                 <Quote size={40} className="text-primary/20 absolute top-6 right-6" />
                 <p className="text-muted-foreground font-sans leading-relaxed italic mb-6">

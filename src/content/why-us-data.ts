@@ -98,6 +98,6 @@ export const whyUsFaqs = [
   {
     question: "Can I attend classes online?",
     answer:
-      "Yes. All of our programs are available in a fully online format with live sessions, recorded materials, and community access. We also have a physical training center in Islamabad for in-person learning.",
+      "Yes. All of our programs are available in a fully online format with live sessions, recorded materials, and community access. We also have a physical location in City Housing Society, Jhelum for in-person learning.",
   },
 ];
