@@ -20,8 +20,8 @@ export const features = [
 ];
 
 export const stats = [
-  { value: "2019", label: "Established" },
-  { value: "500+", label: "Students Mentored" },
+  { value: "2015", label: "Established" },
+  { value: "13k+", label: "Students Mentored" },
   { value: "1000+", label: "Sessions Completed" },
   { value: "4.9", label: "Student Rating" },
 ];

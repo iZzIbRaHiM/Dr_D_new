@@ -75,10 +75,12 @@ const Apply = () => {
               Get complete details about our programs, fee structure, and curriculum in our comprehensive brochure.
             </p>
             <a
-              href="#"
+              href="https://wa.me/923369872332?text=Hi%2C%20I%20would%20like%20to%20request%20the%20Dr%20D%20Academy%20brochure."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded golden-aura pulse-gold transition-all duration-300"
             >
-              <Download size={18} /> Download Now
+              <Download size={18} /> Request Brochure via WhatsApp
             </a>
           </motion.div>
         </div>
