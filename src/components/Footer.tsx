@@ -40,6 +40,7 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-3 text-muted-foreground font-sans text-sm">
+              <p>City Housing Society, Jhelum</p>
               <p>info@drdacademy.com</p>
               <p>+923369872332</p>
               <p>10:00 AM - 07:00 PM</p>
