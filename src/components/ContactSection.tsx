@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { toast } from "sonner";
+import { submitContactForm, isContactFormConfigured } from "@/lib/submitContactForm";
 
 const contactInfo = [
   { icon: MapPin, label: "Our Address", value: "Dr D Academy, Headquarters" },
@@ -18,11 +20,26 @@ const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission placeholder
-    alert("Thank you for your interest! We will contact you shortly.");
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+    if (!isContactFormConfigured()) {
+      toast.error("Form is not configured. Set VITE_CONTACT_FORM_ENDPOINT in production.");
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const ok = await submitContactForm(formData);
+      if (ok) {
+        toast.success("Thank you! We'll get back to you within 24 hours.");
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+      } else {
+        toast.error("Something went wrong. Please try again or contact us by phone/email.");
+      }
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -147,9 +164,10 @@ const ContactSection = () => {
 
             <button
               type="submit"
-              className="w-full px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-lg pulse-gold hover:brightness-110 transition-all duration-300"
+              disabled={submitting}
+              className="w-full px-10 py-4 bg-primary text-primary-foreground font-sans font-semibold rounded-lg pulse-gold hover:brightness-110 transition-all duration-300 disabled:opacity-70"
             >
-              Submit Application
+              {submitting ? "Sending…" : "Submit Application"}
             </button>
           </motion.form>
         </div>

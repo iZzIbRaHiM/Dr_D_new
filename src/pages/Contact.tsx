@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, Clock, Send } from "lucide-react";
+import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { contactHero, contactInfo, contactFaqs } from "@/content/contact-data";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { submitContactForm, isContactFormConfigured } from "@/lib/submitContactForm";
 import {
   Accordion,
   AccordionContent,
@@ -31,11 +33,26 @@ const fadeUp = {
 
 const Contact = () => {
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // placeholder — can be connected to backend
-    console.log("Form submitted:", form);
+    if (!isContactFormConfigured()) {
+      toast.error("Form is not configured. Set VITE_CONTACT_FORM_ENDPOINT in production.");
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const ok = await submitContactForm(form);
+      if (ok) {
+        toast.success("Message sent. We'll get back to you within 24 hours.");
+        setForm({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+      } else {
+        toast.error("Something went wrong. Please try again or contact us by phone/email.");
+      }
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -119,9 +136,10 @@ const Contact = () => {
                   />
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground font-sans font-semibold rounded golden-aura pulse-gold transition-all duration-300"
+                    disabled={submitting}
+                    className="w-full flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground font-sans font-semibold rounded golden-aura pulse-gold transition-all duration-300 disabled:opacity-70"
                   >
-                    <Send size={16} /> Send Message
+                    <Send size={16} /> {submitting ? "Sending…" : "Send Message"}
                   </button>
                 </form>
               </div>
