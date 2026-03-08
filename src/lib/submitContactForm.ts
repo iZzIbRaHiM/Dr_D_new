@@ -11,7 +11,7 @@ export type ContactFormData = {
 
 const ENDPOINT =
   (import.meta.env.VITE_CONTACT_FORM_ENDPOINT as string | undefined)?.trim() ||
-  "https://formspree.io/f/mnjbgedz";
+  "https://formspree.io/f/xqeyable";
 
 /**
  * Submits contact form data to the configured endpoint (e.g. Formspree).
