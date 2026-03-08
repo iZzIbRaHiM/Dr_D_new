@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #020617;
+    --foreground: #ffffff;
+    --muted: #94a3b8;
+    --gold: #d4af37;
+    --gold-luminous: #fbbf24;
+    --card: rgba(15, 23, 42, 0.5);
+    --card-foreground: #ffffff;
+    --border: rgba(212, 175, 55, 0.25);
+    --ring: #d4af37;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-slate-800;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-midnight text-white font-sans antialiased;
+    background: #020617;
+    background-image: radial-gradient(ellipse 80% 50% at 50% 0%, #0b1120 0%, #000000 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gold-aura-hover {
+    @apply transition-all duration-300;
+  }
+  .gold-aura-hover:hover {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+    border-color: #d4af37;
+  }
+
+  .glass-dark {
+    @apply bg-slate-950/50 backdrop-blur-md border border-white/5;
+  }
+}
+
+/* Subtle golden chart lines / geometric background */
+.hero-chart-bg {
+  background-image:
+    linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-chart-lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background:
+    linear-gradient(105deg, transparent 40%, rgba(212, 175, 55, 0.1) 45%, transparent 50%),
+    linear-gradient(75deg, transparent 30%, rgba(212, 175, 55, 0.08) 35%, transparent 40%);
+  pointer-events: none;
+}
