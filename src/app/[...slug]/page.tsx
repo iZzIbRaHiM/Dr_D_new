@@ -9,8 +9,9 @@ const SECTION_MAP: Record<string, string> = {
   contact: "contact",
 };
 
-export default function CatchAllRedirect({ params }: { params: { slug: string[] } }) {
-  const firstSegment = params.slug?.[0] ?? "";
+export default async function CatchAllRedirect({ params }: { params: Promise<{ slug: string[] }> }) {
+  const resolvedParams = await params;
+  const firstSegment = resolvedParams.slug?.[0] ?? "";
   if (firstSegment.includes(".")) {
     notFound();
   }
